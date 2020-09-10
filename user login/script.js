@@ -1,12 +1,15 @@
 
     
         let userData = [];
-        function pushForm(){
-            userData.push(username.value);
-            userData.push(password.value);
-            console.log(userData)
-        }
-    
+        // function pushForm(){
+            //     userData.push(username.value);
+            //     userData.push(password.value);
+            //     console.log(userData)
+            // }
+            
+            // console.log(userData);
+            
+            let displayResult = document.getElementById('display');
     
     function validate(){
         let username = document.getElementById('username');
@@ -29,13 +32,23 @@
             alert('password should be more than 8 characters');
             return false;
         } else if (passwordValidation&&usernameValidation){
-            let userData = [];
+            // let userData = [];
             userData.push(username.value);
             userData.push(password.value);
             console.log(userData)
-            return true;
+
+            let string = `username : ${userData[userData.length-2]}, password: ${userData[userData.length-1]}`
+            
+
+            let resultUsername = document.createElement('p');
+            resultUsername.innerHTML = string;
+            
+            displayResult.appendChild(resultUsername)
+            
+            // return true;
         }
     }
+    console.log(userData);
 
 
 

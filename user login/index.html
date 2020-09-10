@@ -7,13 +7,17 @@
     
 </head>
 <body>
-    <form action="" onsubmit="return validate();" >    
+    <form action="" onsubmit="return false" >    
         
             <input type="text" id ='username' placeholder="unsername">
             <input type="text" id = 'password' placeholder="password">
         
-        <button type="submit" id='btn'> Submit</button> 
+        <button type="submit" id='btn' onclick="validate()" > Submit</button> 
     </form>
+
+    <div class="display" id ='display'>
+
+    </div>
     <script src="/user login/script.js"></script>
 </body>
 </html>
